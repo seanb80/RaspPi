@@ -1,0 +1,19 @@
+11:31:28 **** Incremental Build of configuration Release for project WaterFlow ****
+make all 
+/bin/sh: I/Users/Sean/Library/Arduino15/packages/cores/arduino: No such file or directory
+Building file: ../.ino.cpp
+make: [.ino.cpp.o] Error 127 (ignored)
+Starting C++ compile
+I"/Users/Sean/Library/Arduino15/packages/cores/arduino" -I"/Users/Sean/Library/Arduino15/packages/variants/standard" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+ 
+Starting archiver
+Finished building: arduino.ar
+ 
+Starting combiner
+./.ino.cpp.o   arduino.ar 
+make: ./.ino.cpp.o: No such file or directory
+make: *** [WaterFlow.elf] Error 1
+
+11:31:28 Build Finished (took 68ms)
+

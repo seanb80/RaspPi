@@ -3,11 +3,12 @@ require(TTR)
 data <- read.csv("~/RaspPi/data.csv")
 
 # Makes a graph of the temp for each tank
-plot(data$field1, type = 'l')
-lines(data$field2, type = 'l', col = 'red')
-lines(data$field3, type = 'l', col = 'blue')
-lines(data$field4, type = 'l', col = 'green')
+plot(data$field2, type = 'l', col = 1, ylab = 'Temperature (*C)', main = 'Temperature time series, by tank')
+lines(data$field1, type = 'l', col = 2)
+lines(data$field3, type = 'l', col = 3)
+lines(data$field4, type = 'l', col = 4)
 
+legend('bottomright', legend = c('Tank 1', 'Tank 2', 'Tank 3', 'Tank4'), lty = c(1,1,1,1), col = c(1,2,3,4))
 # A bunch of subsetting and labeling of the data
 tank1 <- as.data.frame(data$field1)
 tank2 <- as.data.frame(data$field2)

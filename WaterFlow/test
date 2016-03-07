@@ -1,0 +1,45 @@
+int flowPin = 2;         // Arduino flowmeter pin number
+	// Declare variables
+	float pulsesCounter; // Main pulses counter
+	float pulsesAux;       // Auxiliary counter
+	float pulsesPrev;       // Auxiliary counter to track pulses activity between loops
+
+	/**
+	 *  Interrupt Service Routine for interrupt 0 (ISR0)
+	 *  ISR0 services an interrupt condition on Pin 2 - whenever voltage on that pin rises.
+	 */ 
+	void rpm ()    
+	{
+	  pulsesCounter++; // Every RISING pulse causes pulsesCounter to increase by one.
+	}
+
+	void setup()
+	{
+	  pinMode(flowPin, INPUT);            // Initialize the digital pin as an input
+	  Serial.begin(9600);                // Start serial port
+	  attachInterrupt(0, rpm, RISING);  // Interrupt is attached to rpm function
+	  sei();                           // Enable interrupt 0 on Pin 2 for a RISING signal.
+	}
+
+	void loop ()
+	{
+	      cli();                         // Disable interrupts to check the counter
+	      pulsesAux = pulsesCounter;    // Copy the ISR variable (main counter). Don't corrupt the counting process
+	      sei();                        // Enable interrupts
+
+	      // If pulses are non-zero and doesn't change during a loop (delay time: ~1sec), 
+	      // send the data to the Serial port
+	      if ( (pulsesAux != 0)  && (pulsesPrev == pulsesAux) ) {
+	          Serial.print("pulses:");          // Sending the string
+	          Serial.println (pulsesAux, DEC); // Sending the pulses counter
+	          cli();               // Disable interrupts
+	          pulsesCounter = 0;  // Reset main counter
+	          sei();              // Enable interrupts
+	          pulsesPrev = 0; // Reset previous counter    
+	          pulsesAux = 0;  // Reset auxiliary counter
+	      }
+	      cli(); // Disable interrupts to copy the pulses count
+	      pulsesPrev = pulsesAux; 
+	      sei(); // Enable interrupts
+	      delay(1000); // Delay time between loops 1sec
+	}

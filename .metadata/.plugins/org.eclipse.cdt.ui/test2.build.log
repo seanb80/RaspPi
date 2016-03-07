@@ -1,0 +1,16 @@
+11:20:47 **** Incremental Build of configuration Release for project test2 ****
+make all 
+/bin/sh: MMD: command not found
+Building file: ../.ino.cpp
+Starting C++ compile
+MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+make: [.ino.cpp.o] Error 127 (ignored)
+Finished building: ../.ino.cpp
+make: ./.ino.cpp.o: No such file or directory
+ 
+make: *** [test2.elf] Error 1
+Starting combiner
+./.ino.cpp.o    
+
+11:20:47 Build Finished (took 65ms)
+

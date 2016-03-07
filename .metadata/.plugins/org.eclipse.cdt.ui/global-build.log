@@ -1,0 +1,136 @@
+20:48:04 **** Clean-only build of configuration Release for project WaterFlow ****
+make clean 
+make: *** No rule to make target `clean'.  Stop.
+
+**** Build of configuration Release for project WaterFlow ****
+
+Nothing to build for project WaterFlow
+20:48:57 **** Clean-only build of configuration Release for project WaterFlow ****
+make clean 
+make: *** No rule to make target `clean'.  Stop.
+20:48:57 **** Incremental Build of configuration Release for project WaterFlow ****
+make all 
+Building file: ../.ino.cpp
+/bin/sh: MMD: command not found
+Starting C++ compile
+make: [.ino.cpp.o] Error 127 (ignored)
+MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+ 
+make: ./.ino.cpp.o: No such file or directory
+make: *** [WaterFlow.elf] Error 1
+Starting combiner
+./.ino.cpp.o    
+10:32:56 **** Clean-only build of configuration Release for project test2 ****
+make clean 
+make: *** No rule to make target `clean'.  Stop.
+
+**** Build of configuration Release for project test2 ****
+
+Nothing to build for project test2
+11:15:45 **** Clean-only build of configuration Release for project test2 ****
+make clean 
+make: *** No rule to make target `clean'.  Stop.
+11:15:46 **** Incremental Build of configuration Release for project test2 ****
+make all 
+Building file: ../.ino.cpp
+/bin/sh: MMD: command not found
+Starting C++ compile
+MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+ 
+make: [.ino.cpp.o] Error 127 (ignored)
+make: ./.ino.cpp.o: No such file or directory
+make: *** [test2.elf] Error 1
+Starting combiner
+./.ino.cpp.o    
+11:20:47 **** Incremental Build of configuration Release for project test2 ****
+make all 
+/bin/sh: MMD: command not found
+Building file: ../.ino.cpp
+Starting C++ compile
+MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+make: [.ino.cpp.o] Error 127 (ignored)
+Finished building: ../.ino.cpp
+make: ./.ino.cpp.o: No such file or directory
+ 
+make: *** [test2.elf] Error 1
+Starting combiner
+./.ino.cpp.o    
+11:29:42 **** Incremental Build of configuration Release for project WaterFlow ****
+make all 
+/bin/sh: MMD: command not found
+Building file: ../.ino.cpp
+make: [.ino.cpp.o] Error 127 (ignored)
+Starting C++ compile
+make: ./.ino.cpp.o: No such file or directory
+MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+make: *** [WaterFlow.elf] Error 1
+Finished building: ../.ino.cpp
+ 
+Starting combiner
+./.ino.cpp.o    
+11:29:50 **** Build of configuration Release for project WaterFlow ****
+make all 
+/bin/sh: I/Users/Sean/Library/Arduino15/packages/cores/arduino: No such file or directory
+Building file: ../.ino.cpp
+make: [.ino.cpp.o] Error 127 (ignored)
+Starting C++ compile
+I"/Users/Sean/Library/Arduino15/packages/cores/arduino" -I"/Users/Sean/Library/Arduino15/packages/variants/standard" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+ 
+Starting archiver
+Finished building: arduino.ar
+ 
+make: ./.ino.cpp.o: No such file or directory
+Starting combiner
+make: *** [WaterFlow.elf] Error 1
+./.ino.cpp.o   arduino.ar 
+11:30:33 **** Incremental Build of configuration Release for project WaterFlow ****
+make all 
+/bin/sh: I/Users/Sean/Library/Arduino15/packages/cores/arduino: No such file or directory
+Building file: ../.ino.cpp
+make: [.ino.cpp.o] Error 127 (ignored)
+Starting C++ compile
+I"/Users/Sean/Library/Arduino15/packages/cores/arduino" -I"/Users/Sean/Library/Arduino15/packages/variants/standard" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+ 
+Starting archiver
+Finished building: arduino.ar
+ 
+Starting combiner
+./.ino.cpp.o   arduino.ar 
+make: ./.ino.cpp.o: No such file or directory
+make: *** [WaterFlow.elf] Error 1
+11:30:40 **** Incremental Build of configuration Release for project WaterFlow ****
+make all 
+Building file: ../.ino.cpp
+/bin/sh: I/Users/Sean/Library/Arduino15/packages/cores/arduino: No such file or directory
+Starting C++ compile
+I"/Users/Sean/Library/Arduino15/packages/cores/arduino" -I"/Users/Sean/Library/Arduino15/packages/variants/standard" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+make: [.ino.cpp.o] Error 127 (ignored)
+ 
+Starting archiver
+Finished building: arduino.ar
+ 
+Starting combiner
+make: ./.ino.cpp.o: No such file or directory
+./.ino.cpp.o   arduino.ar 
+make: *** [WaterFlow.elf] Error 1
+11:31:28 **** Incremental Build of configuration Release for project WaterFlow ****
+make all 
+/bin/sh: I/Users/Sean/Library/Arduino15/packages/cores/arduino: No such file or directory
+Building file: ../.ino.cpp
+make: [.ino.cpp.o] Error 127 (ignored)
+Starting C++ compile
+I"/Users/Sean/Library/Arduino15/packages/cores/arduino" -I"/Users/Sean/Library/Arduino15/packages/variants/standard" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  ".ino.cpp.o"   -Wall
+Finished building: ../.ino.cpp
+ 
+Starting archiver
+Finished building: arduino.ar
+ 
+Starting combiner
+./.ino.cpp.o   arduino.ar 
+make: ./.ino.cpp.o: No such file or directory
+make: *** [WaterFlow.elf] Error 1
