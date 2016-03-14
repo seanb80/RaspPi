@@ -5,7 +5,7 @@ import http.client
 import urllib
 
 
-api_key = 'SFJC52HK5U7F4TOV'
+API_KEY = ‘API_KEY’
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
@@ -21,27 +21,26 @@ device_file3 = device_folder3 + '/w1_slave'
 device_file4 = device_folder4 + '/w1_slave'
 
 
-def read_temp_raw(device_file):
+def read_temp_probe(device_file):
     f = open(device_file, 'r')
-    lines = f.readlines()
+    temp = f.readlines()
     f.close()
-    return lines
+    return temp
 
 def read_temp(device_file):
-    lines = read_temp_raw(device_file)
-    while lines[0].strip()[-3:] != 'YES':
+    temp = read_temp_probe(device_file)
+    while temp[0].strip()[-3:] != 'YES':
         time.sleep(16)
-        lines = read_temp_raw(device_file)
-    equals_pos = lines[1].find('t=')
+        temp = read_temp_probe(device_file)
+    equals_pos = temp[1].find('t=')
     if equals_pos != -1:
-        temp_string = lines[1][equals_pos+2:]
+        temp_string = temp[1][equals_pos+2:]
         temp_c = float(temp_string) / 1000.0
-        temp_f = temp_c * 9.0 / 5.0 + 32.0
     return temp_c
 
 
 def transmit(temp1, temp2, temp3, temp4):
-    params = urllib.parse.urlencode({'field1': temp1, 'field2': temp2, 'field3': temp3, 'field4': temp4, 'key':'SFJC52HK5U7F4TOV'})
+    params = urllib.parse.urlencode({'field1': temp1, 'field2': temp2, 'field3': temp3, 'field4': temp4, 'key’:’API_KEY’})
     headers = {"Content-typZZe": "application/x-www-form-urlencoded","Accept": "text/plain"}
     conn = http.client.HTTPConnection("api.thingspeak.com:80")
     try:
